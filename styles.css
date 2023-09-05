@@ -1,0 +1,49 @@
+div {
+    background-color: black;
+    height: 100vh;
+    border-radius: 4px;
+    width: 400px;
+}
+
+@keyframes rotate {
+    1%{
+        transform: rotate(50deg);
+    }
+    5%{
+        transform: rotate(55deg);
+    }
+    10%{
+        transform: rotate(60deg);
+    }
+    20%{
+        transform: rotate(70deg);
+    }
+    30%{
+        transform: rotate(80deg);
+    }
+}
+
+.NB {
+    transform: rotate(30deg);
+    animation: rotate 5s linear infinite;
+}
+
+.Ball {
+    transform: translateY(0); /* Initial position */
+    position: absolute;
+    left:200px;
+    top: 50px;
+    animation: bounce 5s linear infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    20% {
+        transform: translateY(-40px); /* Bounce up */
+    }
+    50% {
+        transform: translateY(0); /* Back to the ground */
+    }
+}
